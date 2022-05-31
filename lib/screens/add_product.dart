@@ -35,15 +35,18 @@ class _AddProductScreenState extends State<AddProductScreen> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(40.0),
+      padding: const EdgeInsets.all(50.0),
       child: AlertDialog(
         shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(32))),
-        title: const Text('Insert product'),
+          borderRadius: BorderRadius.all(
+            Radius.circular(35),
+          ),
+        ),
+        title: const Text(''),
         contentPadding: EdgeInsets.zero,
         insetPadding: EdgeInsets.zero,
         content: SizedBox(
-          height: MediaQuery.of(context).size.height,
+          height: MediaQuery.of(context).size.height / 1.5,
           width: MediaQuery.of(context).size.width,
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -53,14 +56,14 @@ class _AddProductScreenState extends State<AddProductScreen> {
                 child: Container(
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      border: Border.all(
-                          color: const Color.fromARGB(12, 12, 12, 12))),
+                      border:
+                          Border.all(color: Color.fromARGB(10, 109, 18, 18))),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Padding(
-                        padding: EdgeInsets.symmetric(vertical: 30),
+                        padding: EdgeInsets.symmetric(vertical: 10),
                         child: Icon(
                           Icons.ac_unit_rounded,
                           size: 40,
@@ -71,10 +74,16 @@ class _AddProductScreenState extends State<AddProductScreen> {
                         child: TextField(
                           controller: textController,
                           textAlign: TextAlign.center,
+                          maxLength: 25,
                           style: const TextStyle(
-                              fontSize: 28, fontWeight: FontWeight.bold),
+                              fontSize: 26, fontWeight: FontWeight.w500),
                           decoration: const InputDecoration(
-                            hintText: '',
+                            border: InputBorder.none,
+                            hintText: 'Insert product name here...',
+                            hintStyle: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w200,
+                            ),
                           ),
                         ),
                       ),
