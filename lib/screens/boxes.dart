@@ -65,16 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFE5DBD9), //gainsboro
-      appBar: AppBar(
-        centerTitle: true,
-        toolbarHeight: 70,
-        shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(25))),
-        shadowColor: const Color(0xFF9AD9DB),
-        title: const Text(
-          'Track my fridge',
-        ),
-      ),
+      resizeToAvoidBottomInset: false,
       body: Padding(
         padding: const EdgeInsets.only(top: 18.0),
         child: _groups.isEmpty
@@ -114,12 +105,12 @@ class _HomeScreenState extends State<HomeScreen> {
                         ElegantNotification(
                           enableShadow: false,
                           showProgressIndicator: false,
-                          radius: 25,
-                          notificationPosition: NOTIFICATION_POSITION.bottom,
+                          radius: 23,
+                          notificationPosition: NotificationPosition.center,
                           toastDuration: const Duration(milliseconds: 4500),
                           title: const Text('Deleted!'),
                           description:
-                              Text(product.name + " has been deleted."),
+                              Text("${product.name} has been deleted."),
                           icon: const Icon(
                             Icons.delete_forever_rounded,
                             color: Colors.red,

@@ -39,7 +39,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
       child: AlertDialog(
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(
-            Radius.circular(35),
+            Radius.circular(25),
           ),
         ),
         title: const Text(''),
@@ -79,7 +79,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
                               fontSize: 26, fontWeight: FontWeight.w500),
                           decoration: const InputDecoration(
                             border: InputBorder.none,
-                            hintText: 'Insert product name here...',
+                            hintText: 'Insert product name...',
                             hintStyle: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w200,
